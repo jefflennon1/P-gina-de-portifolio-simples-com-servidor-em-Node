@@ -1,7 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
 
-
-
 :root {
     --color-green: #50fa7b;
     --color-rocket: #7159c1;
@@ -23,22 +21,6 @@ header {
     padding: 32px;
     border-bottom: 1px solid #333;
     background: rgba(0, 0, 0, 0.1)
-}
-
-header div{
-    text-align: center;
-}
-header div a {
-    padding: 32px;
-    color: white;
-    font-size: 18px;
-    line-height: 28px;
-    margin: 0 16px;
-    text-decoration: none;
-}
-header div a:hover{
-    color:#50fa7b;
-    transition: color  1700ms;    
 }
 
 .links {
@@ -66,7 +48,7 @@ header div a:hover{
 
 #wrapper img {
     border-radius: 50%;
-    border: 2px solid #50fa7ae3;
+    border: 5px solid var(--color-green);
     margin-bottom: 32px;
     height: 300px;
 }
@@ -102,9 +84,8 @@ header div a:hover{
 
 /*=== CARDS ===*/
 .cards {
-    max-width: 700px;
-    margin: auto;
-    margin-left: 440px;  
+    max-width: 800px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -112,12 +93,8 @@ header div a:hover{
 
 .card {
     background-color: var(--color-rocket);
-    display:grid ;
-         align-items: center;
+    display: grid;
     cursor: pointer;
-}
-.card__image-container{
-    width: 400px;
 }
 
 .card__image-container img {
@@ -165,7 +142,7 @@ header div a:hover{
 .modal .close-modal {
     color: black;
     position: absolute;
-    top: 5px;
+    top: 8px;
     right: 8px;
     cursor: pointer;
 }
@@ -183,12 +160,9 @@ iframe {
     position: absolute;
     top: 5%;
 }
-.material-icons{
-    color: #111;
-}
 
 /* === FEATURED === */
-.featured-wrapper.card__image-container {
+ .featured-wrapper.card__image-container {
     position: relative;
 }
 .featured {
