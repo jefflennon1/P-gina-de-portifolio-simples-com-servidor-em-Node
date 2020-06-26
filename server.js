@@ -10,11 +10,22 @@ server.use(express.static('public'))
 server.set("view engine", "njk")
 
 nunjucks.configure("views", {
-    express:server
+    express:server,
+    autoescape: false
 })
 
 server.get("/", function(req, res){
-    return res.render("about")
+    const about = {
+      avatar:  "/images/jefferson.jpg",
+      name: "Jefferson Lennon",
+      role: "Programador",
+      description: 'Estudante de Análise e desenvolvimento de sistemas. <br> 26 years',
+      links: [
+          { name: "Github", url: "https://github.com/jefflennon1"  },
+          { name: "Linkedin", url: "https://www.linkedin.com/in/jefferson-lennon-892404104/"  }          
+      ]
+    }
+    return res.render("about", { about })
 })
 
 server.get("/portfolio", function(req, res){
